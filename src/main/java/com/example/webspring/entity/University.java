@@ -20,7 +20,7 @@ public class University {
     @OneToMany(mappedBy = "university",
                 cascade = CascadeType.ALL, fetch = FetchType.LAZY,
                 orphanRemoval = true)
-    private List<Student> studentList = new ArrayList<>();
+    private List<Student> students = new ArrayList<>();
 
 
     public int getId() {
@@ -39,11 +39,11 @@ public class University {
         this.universityName = universityName;
     }
 
-    public List<Student> getStudentList() {
-        return studentList;
+    public List<Student> getStudents() {
+        return students;
     }
 
-    public void setStudentList(List<Student> studentList) {
-        this.studentList = studentList;
+    public void setStudents(List<Student> studentList) {
+        this.students = studentList;
     }
 }
